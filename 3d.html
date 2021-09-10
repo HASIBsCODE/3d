@@ -1,0 +1,81 @@
+<!-- //*html*// -->
+<!DOCTIPE html>
+<html>
+<head>
+<link href="hasan.css" type="text/css" rel="stylesheet"/>
+<title>
+3D cube rotating
+</title>
+<style rel="stylesheet">.wrapper
+    {
+     position:absolute;
+     top:50%;
+     left:50%;
+     perspective:1500px;
+    } 
+    .box-area
+    {
+     transform-style:preserve-3d;
+     animation-name:rotate;
+     animation-duration:10s;
+     animation-timing-function:linear;
+     animation-iteration-count:infinite;
+    }
+    @keyframes rotate{
+     0%{transform:rotate3d(0,0,0,0);
+     }
+     100%{transform:rotate3d(1,1,0,360deg);
+     }
+    }
+    .box
+    {
+     position:absolute;
+     width:200px;
+     height:200px;
+     border:1px solid black;
+    }
+    .box-front
+    {
+     transform:translate(-100px,-100px)translateZ(100px);
+     background:rgba(1,133,0,0.2);
+    }
+    .box-back
+    {
+     transform:translate(-100px,-100px)translateZ(-100px);
+     background:rgba(255,132,0,0.2);
+    }
+    .box-top
+    {
+     transform:translate(-100px,-200px)rotateX(90deg);
+     background:rgba(4,255,6,0.2);
+    }
+    .box-left
+    {
+     transform:translate(-200px,-100px)rotateY(90deg);
+     background:rgba(578,5,56,0.2);
+    }
+    .box-bottom
+    {
+     transform:translateX(-100px)rotateX(90deg);
+     background:rgba(255,30,0,0.5);
+    }
+    .box-right
+    {
+     transform:translateY(-100px)rotateY(90deg);
+     background:rgba(2,255,6,0.2);
+    }</style>
+</head>
+<body>
+<div class="wrapper">
+<div class="box-area">
+<div class="box box-front">1</div>
+<div class="box box-back">2</div>
+<div class="box box-left">3</div>
+<div class="box box-right">4</div>
+<div class="box box-top">5</div>
+<div class="box box-bottom">6</div>
+</div>
+</div>
+</body>
+</html>
+
